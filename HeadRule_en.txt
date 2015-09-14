@@ -1,0 +1,28 @@
+﻿# ==================================================================
+#
+# Dependency HeadRules and dependency relation specifications
+# Language:	English as in YCOE, PPCMBE etc
+#
+# ------------------------------------------------------------------
+
+#section HeadRules
+ADJP	r	ADJ;*+ADJ;CONJP;NUM;D
+ADVP	r	ADV;*+ADV;ADJ;CONJP;N;P;VAGP;VANP;RP;Q;CONJ
+CONJP	l	CONJ;CONJP;VB*;ADJ;BE*;NUMP;P
+CP	l	C;IP
+INTJP	l	INTJ;P
+IP	l	VB*;*+VB*;VA*;*+VA*;BA*;*+BA*;BE*;*+BE*;AX*;*+AX*;CP
+NP	r	N;NS;NPR;NUM;NUMS;Q;QP;NP;CONJP;CP;D;FW;PRO$
+NUM	r	NUM
+NUMP	r	NUM;N
+PP	r	P;*+P;ADV
+QP	r	Q;NUM
+WNP	r	WPRO
+
+#section DependencyRelations
+su	*	*-SBJ|*-SBJ-*
+obj1	*	*-OB1|*-OB1-*
+obj2	*	*-OB2|*-OB2-*
+det	*	NP-POS*|N-GEN*|NS-GEN*|NEG|D|D^*
+appos	*	NP-PRN*
+mod	*	*-LOC|*-TMP|*-INS|*-OBL|PP|PP-*|NP|NP-*|ADJ|ADJ-*|ADJP|ADJP-*|IP-INF|IP-INF-*|IP-PPL|ADVP*|CP-REL*

@@ -1,0 +1,238 @@
+﻿v.	3	VBP|person=3
+v.	3	VBP|person=3
+n.	)	
+n.	.for forms	
+n.	.for pl.forms	
+n.	.for the form	
+n.	.for the forms	
+v.	: sg.3	VBP|person=3
+v.	?ppl.	VBN
+	[from	
+n.	=	
+	→	
+v.	3 & subjunctive.	VBPS|person=3
+n.	acc.	N^A
+	adj.	ADJ
+	adj.& adv.	ADJ|ADV
+	adj.& n.	ADJ|N
+	adj.,adv.,	ADJ|ADV
+	adj.,adv.,n.	ADJ|ADV|N
+	adj.,n.,	ADJ|N
+	adj.,n.,adv.	ADJ|ADV|N
+	adj.[Also as n.	ADJ|N
+	adj.Also pl.	ADJ
+	adj.and adv.	ADJ|ADV
+	adj.and n.	ADJ|N
+	adj.as n.	N
+	adj.comp.	ADJ
+	adj.phr.	ADJP
+	adj.pl.	ADJ
+	adj.sg.	ADJ
+	adj.sup.	ADJS
+	adv.	ADV
+	adv.& n.	ADV|N
+	adv.,phr.	ADV
+	adv.,prep.,	ADV|P
+	adv.]	ADV
+	adv.and conj.	ADV|CONJ
+	adv.and n.	ADV|N
+	adv.comp.	ADV
+	adv.phr.	ADVP
+	adv.phrase	ADVP
+	adv.phrase,adv.	ADV
+	adv.sup.	ADVS
+	adv.with inf.	ADV
+	art.sg.	D
+	card.num.	NUM
+	cluster	XP
+	coll.	XP
+	combining element	CONJ
+	combining element.	CONJ
+	comp.	
+	conj.	CONJ
+	conj.adv.	ADV
+	conj.phr.	CONJP
+	conjunctive adv.	ADV
+	cons.clust.	
+n.	cp	
+adv.	cp.	
+	cpd.	N
+n.	dat.	N^D
+n.	dat.pl.	NS^D
+n.	dat.sg.	N^D
+	def.art.	D
+n.	early dat.pl.	NS^D
+n.	early dat.sg.	N^D
+n.	early pl.	NS
+	exclam.	INTJ
+	first member of cpds.	
+	for forms	
+	for forms see	
+	for other forms see	
+	for pl.forms	
+	for the form	
+	for the forms	
+	for the spellings	
+	for variants see the adv.	
+indef.art.	gen.	D^G
+lim.	gen.	N^G
+n.	gen.pl.	NS^G
+n.	gen.sg.	N^G
+v.	ger.	VAG
+	ger.phr.	IP-PPL
+v.	impv.	VBI
+v.	impv.pl.	VBI|number=pl
+v.	impv.sg.	VBI|number=sg
+	in cpds.	
+	in words taken from l	
+	indef.art.	D
+	indef.num.	NUM
+	indef.pron.	D
+n.	inf.	VB
+v.	inf.	VB
+	inf.particle	CONJ
+v.	inflected inf.	VB
+	int.	INTJ
+	interj.	INTJ
+	interrog.adv.	WADV
+	interrog.particle	WADV
+v.	ipv.	VBI
+v.	ipv.sg.	VBI|number=sg
+	lim.adj.	ADJ
+	n	N
+	n.	N
+	n.,	N
+	n.,adj.,	N|ADJ
+	n.,adj.,adv.	N|ADJ|ADV
+	n.,adj.,and adv.	N|ADJ|ADV
+	n.,adv.,interj.	N|ADJ|INTJ
+	n.and adj.	N|ADJ
+	n.coll.	N
+	n.phr.	NP
+	n.phrase	NP
+	n.pl.	NS
+	n.sg.	N
+	n.sg.	N
+	neg.	NEG+VB
+	noun phr.	NP
+	num.	NUM
+	OF ppl.	
+	of,as	
+v.	only in sg.2	VBP|number=sg|person=2
+	or	
+	ord.num.	NUM
+n.	p.	VBD
+v.	p.	VBD
+v.	p.ind.	VBDI
+v.	p.pl.	VBD|number=pl
+v.	p.ppl.	VBN
+v.	p.sbj.	VBDS
+n.	p.sg.	VBD|number=sg
+v.	p.sg.	VBD|number=sg
+v.	p.sg.1	VBD|number=sg|person=1
+v.	p.sg.2	VBD|number=sg|person=2
+v.	p.sg.2.	VBD|number=sg|person=2
+v.	p.sg.3	VBD|number=sg|person=3
+v.	p.sg.sbj.	VBDS|number=sg
+v.	p.subj.	VBDS
+v.	p.t.	VBD
+	particle	FP
+v.	perf.	BEP+VBN
+v.	perf.3	BEP+VBN
+v.	perf.is	BEP+VBN
+v.	perf.of intr.:	BEP+VBN
+v.	perf.pl.	BEP+VBN
+v.	perf.sg.3	BEP+VBN
+	phr.	XP
+	phr.,adv.,	ADV
+	phr.or cpd.	
+	phr.pl.	
+	phrase	XP
+	phrase as adj.	ADJ
+	phrase,adv.,prep.	ADV|P
+	phrase.	XP
+	pl.	NS
+n.	pl.dat.	NS^D
+v.	pl.followed by pron.subject:	
+n.	pl.gen.	NS^G
+v.	pl.impv.	VBI|number=pl
+v.	pl.ind.	VBP|number=pl
+n.	pl.or coll.	NS
+v.	pl.p.ppl.	VBN|number=pl
+v.	pl.sbj.	VBPS|number=sg
+n.	pl.usu.uninfl.; rarely	NS
+n.	plural:	NS
+v.	pp.	VBN
+n.	ppl.	VBN
+v.	ppl.	VBN
+v.	ppl.,adj.	VBN|ADJ
+v.	ppl.:	VBN
+v.	ppl.adj.	VBN
+v.	ppl.and n.	VBN|N
+	ppl.as n.	N
+	ppl.as n.	N
+v.	pr.perf.	VBP
+v.	pr.pl.	VBP|number=pl
+v.	pr.ppl.	VAG
+v.	pr.sbj.sg.	VBPS|number=sg
+v.	pr.sg.2	VBP|number=sg|person=2
+v.	pr.sg.3	VBP|number=sg|person=3
+v.	pr.subj.[	VBPS|number=sg
+	pred.adj.	ADJ
+	pref.	PRF
+	prefix.	PRF
+	prep.	P
+	prep.phr.	PP
+v.	pres.sg.3	VBP|number=sg|person=3
+	pron.	PRO
+	pron.,adj.,adv.	PRO|ADJ|ADV
+	pron.dual.	PRO
+	pron.indef.	PRO
+	pron.phrase.	
+	pron.pl.	PRO
+	pron.poss.dual.	PRO
+	pron.poss.pl.	PRO
+	pronominal adv.	PRO+ADV
+	prosthetic.	
+	quasi-prep.	P
+	rel.pron.	WPRO
+	sb.	
+n.	sb.1	VBPS|person=1
+v.	sbj.	VBPS
+v.	sbj.3	VBPS|person=3
+v.	sbj.pl.	VBPS|number=pl
+v.	sbj.sg.	VBPS|number=sg
+n.	see	
+n.	sg.	N
+v.	sg.1	VBP|number=sg|person=1
+v.	sg.2	VBP|number=sg|person=2
+v.	sg.2.	VBP|number=sg|person=2
+v.	sg.2:	VBP|number=sg|person=2
+n.	sg.3	VBP|person=3
+v.	sg.3	VBP|number=sg|person=3
+v.	sg.3 sbj.	VBPS|person=3|number=sg
+v.	sg.3.	VBP|number=sg|person=3
+v.	sg.3:	VBP|number=sg|person=3
+n.	sg.dat.or acc.	N
+n.	sg.gen.	N^G
+v.	sg.impv.	VBI|number=sg
+v.	sg.subj.	VBPS|number=sg
+	some n quots.may belong to	
+	stressed prior member of cpd.verbs and action nouns.	
+	subj.	VBPS
+v.	subj.sg.	VBPS|number=sg
+adj.	sup.	ADJS
+adv.	sup.	ADV
+adv.	t	
+	the past tense is supplied by	
+	unknown	X
+n.	usu.coll.; pl.	NS
+	v.	VB
+	v.also	
+	v.impv.	VBI
+	v.p.ppl.	
+	v.p.sg.	VBP
+	v.phr.	VP
+	v.phrase	VP
+	v.sg.3	VBP|number=sg|person=3
+	verbal particle	RP

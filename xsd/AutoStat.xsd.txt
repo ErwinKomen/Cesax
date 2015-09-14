@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AutoStat" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="AutoStat" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Stat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StatId" type="xs:integer" />
+                  <xs:attribute name="NodeId" type="xs:integer" />
+                  <xs:attribute name="File" type="xs:string" />
+                  <xs:attribute name="Info" type="xs:string" />
+                  <xs:attribute name="RefType" type="xs:string" />
+                  <xs:attribute name="Constraint" type="xs:string" />
+                  <xs:attribute name="LinkType" type="xs:string" />
+                  <xs:attribute name="IPdist" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="File" type="xs:string" />
+            <xs:attribute name="NPcount" type="xs:double" />
+            <xs:attribute name="Date" type="xs:string" />
+            <xs:attribute name="User" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

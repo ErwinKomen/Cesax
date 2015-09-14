@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Qstack" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Qstack" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="entry">
+          <xs:complexType>
+            <xs:attribute name="entryId"	type="xs:integer" />
+            <xs:attribute name="Number"		type="xs:integer" />
+            <xs:attribute name="Name"		type="xs:string" />
+            <xs:attribute name="Type"		type="xs:string" />
+            <xs:attribute name="Base"		type="xs:string" />
+            <xs:attribute name="Relation"	type="xs:string" />
+            <xs:attribute name="Value"		type="xs:string" />
+            <xs:attribute name="Node"		type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QfeatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Qfeat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="QfeatId"	type="xs:integer" />
+                  <xs:attribute name="Name"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

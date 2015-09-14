@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PeriodList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="PeriodList" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PeriodInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Period" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PeriodFile" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="PeriodId" type="xs:integer" />
+                        <xs:attribute name="FileId" type="xs:integer" />
+                        <xs:attribute name="Name" type="xs:string" />
+                        <xs:attribute name="Descr" type="xs:string" />
+                        <xs:attribute name="Search" type="xs:string" />
+                        <xs:attribute name="IPmat" type="xs:integer" />
+                        <xs:attribute name="IPsub" type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="PeriodId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="From" type="xs:integer" />
+                  <xs:attribute name="Until" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Division" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Member" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="MemberId" type="xs:integer" />
+                        <xs:attribute name="DivisionId" type="xs:integer" />
+                        <xs:attribute name="PeriodId" type="xs:integer" />
+                        <xs:attribute name="Period" type="xs:string" />
+                        <xs:attribute name="Group" type="xs:string" />
+                        <xs:attribute name="Order" type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="DivisionId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Group" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="GroupId" type="xs:integer" />
+                  <xs:attribute name="Order" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="File" type="xs:string" />
+            <xs:attribute name="Goal" type="xs:string" />
+            <xs:attribute name="Comment" type="xs:string" />
+            <xs:attribute name="Created" type="xs:dateTime" />
+            <xs:attribute name="Changed" type="xs:dateTime" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

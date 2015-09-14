@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dependency" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Dependency" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dep">
+          <xs:complexType>
+            <xs:attribute name="DepId"		type="xs:integer" />
+            <xs:attribute name="forestId"	type="xs:integer" />
+            <xs:attribute name="EtreeId"	type="xs:integer" />
+            <xs:attribute name="Id"			type="xs:integer" />
+            <xs:attribute name="Vern"		type="xs:string" />
+            <xs:attribute name="Lemma"		type="xs:string" />
+            <xs:attribute name="Cpos"		type="xs:string" />
+            <xs:attribute name="Pos"		type="xs:string" />
+            <xs:attribute name="Hd"			type="xs:string" />
+            <xs:attribute name="Rel"		type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

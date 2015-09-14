@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Cesax" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Cesax" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Setting" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name"   type="xs:string" />
+                  <xs:attribute name="Value"  type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PhrTypeList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PhrType" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="PhrTypeId" type="xs:integer" />
+                  <xs:attribute name="Name"      type="xs:string" />
+                  <xs:attribute name="Node"      type="xs:string" />
+                  <xs:attribute name="Type"      type="xs:string" />
+                  <xs:attribute name="Target"    type="xs:string" />
+                  <xs:attribute name="Child"     type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RefTypeList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RefType" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="RefTypeId" type="xs:integer" />
+                  <xs:attribute name="Name"      type="xs:string" />
+                  <xs:attribute name="Descr"     type="xs:string" />
+                  <xs:attribute name="Color"     type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StatusList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StatusId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PronounList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pronoun" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="PronounId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="PGN" type="xs:string" />
+                  <xs:attribute name="OE" type="xs:string" />
+                  <xs:attribute name="ME" type="xs:string" />
+                  <xs:attribute name="eModE" type="xs:string" />
+                  <xs:attribute name="MBE" type="xs:string" />
+                  <xs:attribute name="Notes" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CategoryList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Category" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CatId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="Type" type="xs:string" />
+                  <xs:attribute name="OE" type="xs:string" />
+                  <xs:attribute name="ME" type="xs:string" />
+                  <xs:attribute name="eModE" type="xs:string" />
+                  <xs:attribute name="MBE" type="xs:string" />
+                  <xs:attribute name="Notes" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FeatureList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Feature" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="FeatureId"	type="xs:integer" />
+                  <xs:attribute name="type"			type="xs:string" />
+                  <xs:attribute name="name"			type="xs:string" />
+                  <xs:attribute name="value"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NPfeatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NPfeat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="NPfeatId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="Variants" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConstraintList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Constraint" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="ConstraintId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="Mult" type="xs:integer" />
+                  <xs:attribute name="Level" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="CnsListId" type="xs:integer" />
+            <xs:attribute name="Name" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="XrelList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Xrel" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="XrelId" type="xs:integer" />
+                  <xs:attribute name="Name"   type="xs:string" />
+                  <xs:attribute name="Type"   type="xs:string" />
+                  <xs:attribute name="Xname"  type="xs:string" />
+                  <xs:attribute name="Descr"  type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StackList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StackEl" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StackElId"	type="xs:integer" />
+                  <xs:attribute name="Id"			type="xs:integer" />
+                  <xs:attribute name="Level"		type="xs:integer" />
+                  <xs:attribute name="Label"		type="xs:string" />
+                  <xs:attribute name="First"		type="xs:string" />
+                  <xs:attribute name="Vern"			type="xs:string" />
+                  <xs:attribute name="Head"			type="xs:string" />
+                  <xs:attribute name="Equal"		type="xs:string" />
+                  <xs:attribute name="NPtype"		type="xs:string" />
+                  <xs:attribute name="PGN"			type="xs:string" />
+                  <xs:attribute name="Person"		type="xs:string" />
+                  <xs:attribute name="Gender"		type="xs:string" />
+                  <xs:attribute name="Number"		type="xs:string" />
+                  <xs:attribute name="IPlabel"		type="xs:string" />
+                  <xs:attribute name="IPances"		type="xs:string" />
+                  <xs:attribute name="Loc"			type="xs:string" />
+                  <xs:attribute name="GrRole"		type="xs:string" />
+                  <xs:attribute name="Coref"		type="xs:string" />
+                  <xs:attribute name="ChainNum"		type="xs:integer" />
+                  <xs:attribute name="ChainIds"		type="xs:string" />
+                  <xs:attribute name="IsLocal"		type="xs:string" />
+                  <xs:attribute name="IsSpeech"		type="xs:string" />
+                  <xs:attribute name="IPdist"		type="xs:integer" />
+                  <xs:attribute name="IPpos"		type="xs:string" />
+                  <xs:attribute name="IPnum"		type="xs:integer" />
+                  <xs:attribute name="HasCoref"		type="xs:string" />
+                  <xs:attribute name="IsNearDem"	type="xs:string" />
+                  <xs:attribute name="PrefNum"		type="xs:integer" />
+                  <xs:attribute name="Ref"			type="xs:integer" />
+                  <xs:attribute name="Eval"			type="xs:integer" />
+                  <xs:attribute name="Constraints"	type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LangDef">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Language" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VernChar"  type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="VernStart" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="VernEnd"   type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                    <xs:element name="VernIntm"  type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                    <xs:element name="Punct"     type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+                  </xs:sequence>
+                  <xs:attribute name="LanguageID" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TemplateList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Template" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Tcell" minOccurs="0" maxOccurs="unbounded">
+					  <xs:complexType>
+					    <xs:attribute name="TcellId"    type="xs:integer" />
+                        <xs:attribute name="TemplateId" type="xs:integer" />
+					    <xs:attribute name="Name"       type="xs:string" />
+					    <xs:attribute name="Content"    type="xs:string" />
+					    <xs:attribute name="Env"        type="xs:string" />
+					    <xs:attribute name="Descr"      type="xs:string" />
+					  </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="TemplateId" type="xs:integer" />
+                  <xs:attribute name="Name"       type="xs:string" />
+                  <xs:attribute name="Descr"      type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QueryList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Query" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QryRel" minOccurs="0" maxOccurs="unbounded">
+					  <xs:complexType>
+					    <xs:attribute name="QryRelId"   type="xs:integer" />
+                        <xs:attribute name="QueryId"    type="xs:integer" />
+					    <xs:attribute name="RelName"    type="xs:string" />
+					    <xs:attribute name="RelArg"     type="xs:string" />
+					    <xs:attribute name="RelCond"    type="xs:string" />
+					  </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="QueryId" type="xs:integer" />
+                  <xs:attribute name="Name"    type="xs:string" />
+                  <xs:attribute name="Search"  type="xs:string" />
+                  <xs:attribute name="Descr"   type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MosList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mos" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MosAct" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="MosActId" type="xs:integer" />
+                        <xs:attribute name="MosId"    type="xs:integer" />
+                        <xs:attribute name="Order"    type="xs:integer" />
+                        <xs:attribute name="Dir"      type="xs:string" />
+                        <xs:attribute name="Name"     type="xs:string" />
+                        <xs:attribute name="Arg"      type="xs:string" />
+                        <xs:attribute name="Descr"    type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="MosId"	type="xs:integer" />
+                  <xs:attribute name="Order"	type="xs:integer" />
+                  <xs:attribute name="Name"		type="xs:string" />
+                  <xs:attribute name="Trigger"	type="xs:string" />
+                  <xs:attribute name="Cond"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="LangId" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FindReplList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FindRepl" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="FindReplId"	type="xs:integer" />
+                  <xs:attribute name="Type"			type="xs:string" />
+                  <xs:attribute name="Name"			type="xs:string" />
+                  <xs:attribute name="Find"			type="xs:string" />
+                  <xs:attribute name="Repl"			type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AffixList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Affix" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="AfxEl" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:attribute name="AfxElId" type="xs:integer" />
+                          <xs:attribute name="AffixId" type="xs:integer" />
+                          <xs:attribute name="CatSrc"  type="xs:string" />
+                          <xs:attribute name="CatDst"  type="xs:string" />
+                          <xs:attribute name="Lang"    type="xs:string" />
+                          <xs:attribute name="Suffix"  type="xs:string" />
+                          <xs:attribute name="Rewrite" type="xs:string" />
+                          <xs:attribute name="EnvPre"  type="xs:string" />
+                          <xs:attribute name="EnvFol"  type="xs:string" />
+                          <xs:attribute name="Comment" type="xs:string" />
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  <xs:attribute name="AffixId" type="xs:integer" />
+                  <xs:attribute name="Name"    type="xs:string" />
+                  <xs:attribute name="Gloss"   type="xs:string" />
+                  <xs:attribute name="Def"     type="xs:string" />
+                  <xs:attribute name="Type"    type="xs:string" />
+                  <xs:attribute name="Date"    type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

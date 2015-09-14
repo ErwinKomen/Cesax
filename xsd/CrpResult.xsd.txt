@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CrpOview" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CrpOview" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProjectName" type="xs:string" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DstDir" type="xs:string" minOccurs="0" />
+              <xs:element name="SrcDir" type="xs:string" minOccurs="0" />
+              <xs:element name="Notes" type="xs:string" minOccurs="0" />
+              <xs:element name="Analysis" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PeriodList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Period" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PeriodFile" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="PeriodId" type="xs:integer" />
+                        <xs:attribute name="FileId" type="xs:integer" />
+                        <xs:attribute name="Name" type="xs:string" />
+                        <xs:attribute name="Descr" type="xs:string" />
+                        <xs:attribute name="Search" type="xs:string" />
+                        <xs:attribute name="IPmat" type="xs:integer" />
+                        <xs:attribute name="IPsub" type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="PeriodId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="From" type="xs:integer" />
+                  <xs:attribute name="Until" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Division" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Member" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="MemberId" type="xs:integer" />
+                        <xs:attribute name="DivisionId" type="xs:integer" />
+                        <xs:attribute name="PeriodId" type="xs:integer" />
+                        <xs:attribute name="Period" type="xs:string" />
+                        <xs:attribute name="Group" type="xs:string" />
+                        <xs:attribute name="Order" type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="DivisionId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OutList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Out" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="OutId" type="xs:integer" />
+                  <xs:attribute name="Descr" type="xs:string" />
+                  <xs:attribute name="NoExmp" type="xs:string" />
+                  <xs:attribute name="File" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatOutList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CatOut" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CatOutId" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="QCline" type="xs:integer" />
+                  <xs:attribute name="CatLine" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CatId" type="xs:integer" />
+                  <xs:attribute name="OviewId" type="xs:integer" />
+                  <xs:attribute name="QCline" type="xs:integer" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Count" type="xs:integer" />
+                  <xs:attribute name="Period" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OviewList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Oview" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="OviewId" type="xs:integer" />
+                  <xs:attribute name="QCline" type="xs:integer" />
+                  <xs:attribute name="Period" type="xs:string" />
+                  <xs:attribute name="From" type="xs:integer" />
+                  <xs:attribute name="Until" type="xs:integer" />
+                  <xs:attribute name="Out" type="xs:string" />
+                  <xs:attribute name="Count" type="xs:integer" />
+                  <xs:attribute name="Cat" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Result" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Prec" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="Foll" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="Text" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                    <xs:element name="Psd"  type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                    <xs:element name="Pde"  type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+                    <xs:element name="Feature" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Name" type="xs:string" />
+                        <xs:attribute name="Value" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="ResId"	type="xs:integer" />
+                  <xs:attribute name="OviewId"	type="xs:integer" />
+                  <xs:attribute name="File"		type="xs:string" />
+                  <xs:attribute name="Search"	type="xs:string" />
+                  <xs:attribute name="TextId"	type="xs:string" />
+                  <xs:attribute name="Cat"		type="xs:string" />
+                  <xs:attribute name="forestId"	type="xs:integer" />
+                  <xs:attribute name="eTreeId"	type="xs:integer" />
+                  <xs:attribute name="Period"	type="xs:string" />
+                  <xs:attribute name="PeriodNo"	type="xs:integer" />
+                  <xs:attribute name="Notes"	type="xs:string" />
+                  <xs:attribute name="Select"	type="xs:string" />
+                  <xs:attribute name="Hidden"	type="xs:string" />
+                  <xs:attribute name="Status"	type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="ResultKey" name="ResultRecord">
+      <xs:selector xpath=".//Result" />
+      <!-- The key for each <Result> element is the unique @ResId value -->
+      <xs:field xpath="@ResId" />
+      <xs:field xpath="@Select" />
+      <xs:field xpath="@Cat" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="FeatureKey" name="FeatureRecord">
+      <xs:selector xpath=".//Feature" />
+      <!-- The key for each <Feature> element is the @name value -->
+      <xs:field xpath="@Name" />
+      <xs:field xpath="@Value" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

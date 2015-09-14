@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="liftpos" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="liftpos" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="entry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pdg" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id"		type="xs:integer" />
+                  <xs:attribute name="PdgId"	type="xs:integer" />
+                  <xs:attribute name="lex"		type="xs:string" />
+                  <xs:attribute name="lexc"		type="xs:string" />
+                  <xs:attribute name="pos"		type="xs:string" />
+                  <xs:attribute name="rpos"		type="xs:string" />
+                  <xs:attribute name="feat"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id"		type="xs:integer" />
+            <xs:attribute name="lex"	type="xs:string" />
+            <xs:attribute name="lexc"	type="xs:string" />
+            <xs:attribute name="pos"	type="xs:string" />
+            <xs:attribute name="rpos"	type="xs:string" />
+            <xs:attribute name="feat"	type="xs:string" />
+            <!-- Definition: if available in English, else in Russian -->
+            <xs:attribute name="def"	type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="EntryPrimaryKey" name="KeyEntryRecord">
+      <xs:selector xpath=".//entry" />
+      <xs:field xpath="@lex" />
+      <xs:field xpath="@pos" />
+      <xs:field xpath="@rpos" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="PdgPrimaryKey" name="KeyPdgRecord">
+      <xs:selector xpath=".//pdg" />
+      <xs:field xpath="@lex" />
+      <xs:field xpath="@pos" />
+      <xs:field xpath="@id" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

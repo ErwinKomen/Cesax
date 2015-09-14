@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TEI" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="eTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Value" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="fs" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="f" minOccurs="0" maxOccurs="unbounded">
+				  <xs:complexType>
+					<xs:attribute name="name" type="xs:string" />
+					<xs:attribute name="value" type="xs:string" />
+				  </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" />
+            <xs:attribute name="feats" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ref" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="type" type="xs:string" />
+            <xs:attribute name="target" type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Attrib" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Value" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="eLeaf" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Type" type="xs:string" />
+            <xs:attribute name="Text" type="xs:string" />
+            <xs:attribute name="from" type="xs:integer" />
+            <xs:attribute name="to" type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="eTree" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Id" type="xs:integer" />
+      <xs:attribute name="Label" type="xs:string" />
+      <xs:attribute name="MyId" type="xs:integer" />
+      <xs:attribute name="RefId" type="xs:integer" />
+      <xs:attribute name="RefType" type="xs:string" />
+      <xs:attribute name="NdDist" type="xs:integer" />
+      <xs:attribute name="from" type="xs:integer" />
+      <xs:attribute name="to" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TEI" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="eTree" />
+        <xs:element name="forestGrp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="forest" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="div" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="seg" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                        </xs:sequence>
+                        <xs:attribute name="lang" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="eTree" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="forestId" type="xs:integer" />
+                  <xs:attribute name="File" type="xs:string" />
+                  <xs:attribute name="TextId" type="xs:string" />
+                  <xs:attribute name="Location" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="File" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

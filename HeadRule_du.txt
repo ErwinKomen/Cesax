@@ -1,0 +1,104 @@
+﻿# ==================================================================
+#
+# Dependency HeadRules and dependency relation specifications
+# Language:	Dutch as in Etstoel (Old Dutch)
+#
+# History:
+# 28/aug/2013	ERK	Created
+# 02/sep/2013	ERK	Added section [CompactPos]
+#
+# ------------------------------------------------------------------
+
+#section HeadRules
+ADJP	l	ADJ*;ADV*;
+ADVP	l	ADV*;ADJ*
+ADVPR	l	ADV*
+CONJP	l	CONJ;SMC;*
+C	r	AUX*;*
+CP	l	AUX*;C;NP;WPRO*;ADV*;WADV*;IP*;CP*;DPRO;PP;*
+IP	r	AUX*;VB*;VD;VA*;TO;NP;NPS;PP*;RP;CP;C
+FW	l	FW
+NP	l	N;NS;PRO;PROI;DPRO*;NPR*;Q;MAN;NUM;ADJ*;PRO$;NP;NP_*;OTHER*;NUMP;N$;ADV*;D;PP;*
+NP$	r	N$;NP$;NPR$;NS$;NUM$;PRO$;D$;NPR*;NS;N;PRO;NP;ADJ
+NPR	r	NPR
+NPS	r	N;NP$
+NS	r	NS;*
+N	r	N
+NUMP	r	NUM;FW;ADV
+PP	l	P;P+*;FW;NEG;C;PP;*
+QP	r	Q;ADVR
+SMC	l	SMC;NP;PP;*P
+VAN	l	VAN
+VBP	l	VBP
+WADJP	l	ADJ
+WADVP	l	WADV*;ADV;WD;WPRO*;*
+WNP	l	N;NS;WPRO*;WD;DPRO*
+WPP	l	P
+
+#section DependencyRelations
+su	*	*_SBJ|*_SBJ-*|*_SBJ_*
+obj1	*	*_OB1|*_OB1-*
+obj2	*	*_OB2|*_OB2-*
+comp	PP*	NP*
+det	*	NP_POS*|N_GEN*|NS_GEN*|NEG|D|D^*
+aux	*	AUX*
+appos	*	NP_PRN*
+mod	*	*_LOC|*_TMP|*_INS|*_OBL|PP|PP_*|NP|NP_*|ADJ|ADJ_*|ADJP|ADJP_*|IP_INF|IP_INF-*|IP_PPL|ADVP*|CP_REL*
+
+#section CompactPos
+# Syntax: CPOS - POS
+#
+ADJ	ADJ*
+ADV	ADV*
+AX	AUX*
+D	DPRO*|D
+NPR	NPR*
+N	N|NS|N$
+PRO	PRO|PRO*
+VA	VA*
+VB	VB*
+
+#section PosRules
+# Syntax: POS - CPOS - features - Vernacular
+#
+ADJ	Adj	*
+P	Adp	*
+ADV_NEG	Adv	neg*
+ADV	Adv	*
+D	Art	*
+C	Conj	subord*|alse*
+CONJ	Conj	*
+INT	Interj	*
+FW	Misc	*
+NS	N	plu*
+NPR	N	prop*
+N	N	sing|*
+Q	Num	indef*
+NUM	Num	card|ord|*
+WPRO	Pron	rel*	w*
+Q	Pron	indef*
+C	Pron	rel*	*
+DPRO	Pron	dem*
+PRO$	Pron	poss*
+PRO_RFL	Pron	refl*
+PRO	Pron	pers|*
+P	PronAdv	prep*
+ADV	PronAdv	dem*
+WPROR	PronAdv	rel*	w*
+DPROR	PronAdv	rel*	*
+ADV	PronAdv	*
+:	Punc	colon
+;	Punc	semicolon
+.	Punc	period
+,	Punc	comma
+!	Punc	excl
+VBD	V	fin,past,lex*
+AUXD	V	fin,past,*
+VBP	V	fin,pres,lex
+AUXP	V	fin,pres,*
+VBI	V	imp*
+VB	V	infin*
+VAN	V	participle,past*
+VAG	V	participle,pres*
+RP	V	prtcl*
+V	V	*

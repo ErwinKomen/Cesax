@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MorphDict" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MorphDict" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MorphList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Morph" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="MorphId"	type="xs:integer" />
+                  <!-- The @EntryId is a link to a dictionary of type [OEdict.xsd] that contains definitions -->
+                  <xs:attribute name="EntryId"	type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string" />
+                  <xs:attribute name="Pos"		type="xs:string" />
+                  <xs:attribute name="Label"	type="xs:string" />
+                  <!-- The @l attribute is the lemma field			-->
+                  <xs:attribute name="l"		type="xs:string" />
+                  <!-- The @f attribute is the feature values field	-->
+                  <xs:attribute name="f"		type="xs:string" />
+                  <!-- The @h attribute indicates how and when propagation took place -->
+                  <xs:attribute name="h"		type="xs:string" />
+                  <!-- The @t attribute can be "l(emma)" or "d(erived)" for the type of form this is -->
+                  <xs:attribute name="t"		type="xs:string" />
+                  <xs:attribute name="File"		type="xs:string" />
+                  <xs:attribute name="forestId"	type="xs:integer" />
+                  <xs:attribute name="EtreeId"	type="xs:integer" />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VernPosList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VernPos" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="VernPosId"	type="xs:integer" />
+                  <xs:attribute name="Vern"			type="xs:string" />
+                  <!-- The @v attribute contains a vernacular form possibly including a hyphen	-->
+                  <xs:attribute name="v"			type="xs:string" />
+                  <xs:attribute name="Pos"			type="xs:string" />
+                  <xs:attribute name="PrntLabel"	type="xs:string" />
+                  <xs:attribute name="Type"			type="xs:string" />
+                  <xs:attribute name="Lev"			type="xs:string" />
+                  <!-- The @Src attribute shows the source of this contribution	-->
+                  <xs:attribute name="Src"			type="xs:string" />
+                  <!-- The @MorphId attribute links the item to an entry in [Morph] -->
+                  <xs:attribute name="MorphId"		type="xs:integer" />
+                  <!-- The @l attribute is the lemma field			-->
+                  <xs:attribute name="l"			type="xs:string" />
+                  <!-- The @f attribute is the feature values field	-->
+                  <xs:attribute name="f"			type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SuffixList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Suffix" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="SuffixId"	type="xs:integer" />
+                  <xs:attribute name="Sfx"		type="xs:string"  />
+                  <xs:attribute name="Pos"		type="xs:string"  />
+                  <xs:attribute name="Rew"		type="xs:string"  />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PrefixList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Prefix" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="PrefixId"	type="xs:integer" />
+                  <xs:attribute name="Pre"		type="xs:string"  />
+                  <xs:attribute name="Rew"		type="xs:string"  />
+                  <xs:attribute name="Size"		type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeriveList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Derive" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="DeriveId"	type="xs:integer" />
+                  <xs:attribute name="Pos"		type="xs:string"  />
+                  <xs:attribute name="Head"		type="xs:string"  />
+                  <xs:attribute name="Type"		type="xs:string"  />
+                  <xs:attribute name="Sfx"		type="xs:string"  />
+                  <xs:attribute name="Rew"		type="xs:string"  />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EditOpList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EditOp" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="EditOpId"	type="xs:integer" />
+                  <xs:attribute name="Pos"		type="xs:string"  />
+                  <xs:attribute name="Type"		type="xs:string"  />
+                  <xs:attribute name="Src"		type="xs:string"  />
+                  <xs:attribute name="Rew"		type="xs:string"  />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Exmp"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DistList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dist" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="DistId"	type="xs:integer" />
+                  <xs:attribute name="Len"		type="xs:integer" />
+                  <xs:attribute name="Cost"		type="xs:integer" />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string"  />
+                  <xs:attribute name="Lemma"	type="xs:string"  />
+                  <xs:attribute name="Type"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SimiList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Simi" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="SimiId"	type="xs:integer" />
+                  <xs:attribute name="Len"		type="xs:integer" />
+                  <xs:attribute name="Value"	type="xs:integer" />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string"  />
+                  <xs:attribute name="Lemma"	type="xs:string"  />
+                  <xs:attribute name="Type"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnvList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Env" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="EnvId"	type="xs:integer" />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                  <xs:attribute name="Focus"	type="xs:string"  />
+                  <xs:attribute name="Pre"		type="xs:string"  />
+                  <xs:attribute name="Fol"		type="xs:string"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GenList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gen" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="GenId"		type="xs:integer" />
+                  <xs:attribute name="Pos"			type="xs:string" />
+                  <xs:attribute name="PrntLabel"	type="xs:string" />
+                  <xs:attribute name="Type"			type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CatId"		type="xs:integer" />
+                  <xs:attribute name="Pos"			type="xs:string"  />
+                  <xs:attribute name="Head"			type="xs:string"  />
+                  <xs:attribute name="Near" 		type="xs:string"  />
+                  <xs:attribute name="Type"			type="xs:string"  />
+                  <xs:attribute name="Freq"			type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CheckList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Check" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CheckId"  type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string" />
+                  <xs:attribute name="Pos"		type="xs:string" />
+                  <xs:attribute name="PrntLabel"	type="xs:string" />
+                  <xs:attribute name="Lemma"	type="xs:string" />
+                  <xs:attribute name="Correct"	type="xs:string" />
+                  <xs:attribute name="Status"	type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LemmaList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Lemma" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="LemmaId"  type="xs:integer" />
+                  <xs:attribute name="Vern"		type="xs:string" />
+                  <xs:attribute name="MWcat"	type="xs:string" />
+                  <xs:attribute name="Pos"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RemainList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Remain" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="RemainId"		type="xs:integer" />
+                  <xs:attribute name="Vern"			type="xs:string" />
+                  <xs:attribute name="Pos"			type="xs:string" />
+                  <xs:attribute name="PrntLabel"	type="xs:string" />
+                  <xs:attribute name="File"			type="xs:string" />
+                  <xs:attribute name="Clause"		type="xs:string" />
+                  <xs:attribute name="forestId"		type="xs:integer" />
+                  <xs:attribute name="EtreeId"		type="xs:integer" />
+                  <xs:attribute name="Freq"			type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="RemainPrimaryKey" name="RemainRecord">
+      <xs:selector xpath=".//Remain" />
+      <!-- The key for each entry is the unique combination of three elements -->
+      <xs:field xpath="@Vern" />
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@PrntLabel" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="MorphPrimaryKey" name="MorphRecord">
+      <xs:selector xpath=".//Morph" />
+      <!-- The key for each entry is the unique combination of four elements -->
+      <xs:field xpath="@Vern" />
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Label" />
+      <!-- The @f attribute is the set of features -->
+      <xs:field xpath="@f" />
+      <!-- The @l attribute is the lemma -->
+      <xs:field xpath="@l" />
+      <!-- The @EntryId attribute refers back to the dictionary -->
+      <xs:field xpath="@EntryId" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="SuffixPrimaryKey" name="SuffixRecord">
+      <xs:selector xpath=".//Suffix" />
+      <!-- The key for each entry is the unique combination of three elements -->
+      <xs:field xpath="@Sfx" />
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Rew" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="EditOpPrimaryKey" name="EditOpRecord">
+      <xs:selector xpath=".//EditOp" />
+      <!-- The key for each entry is the unique combination of 4 elements -->
+      <xs:field xpath="@Src" />
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Rew" />
+      <xs:field xpath="@Type" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="DistPrimaryKey" name="DistRecord">
+      <xs:selector xpath=".//Dist" />
+      <!-- The key for each entry is the unique combination of 3 elements -->
+      <xs:field xpath="@Len" />
+      <xs:field xpath="@Cost" />
+      <xs:field xpath="@Type" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="SimiPrimaryKey" name="SimiRecord">
+      <xs:selector xpath=".//Simi" />
+      <!-- The key for each entry is the unique combination of 3 elements -->
+      <xs:field xpath="@Len" />
+      <xs:field xpath="@Value" />
+      <xs:field xpath="@Type" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="EnvPrimaryKey" name="EnvRecord">
+      <xs:selector xpath=".//Env" />
+      <!-- The key for each entry is the unique combination of 3 elements -->
+      <xs:field xpath="@Focus" />
+      <xs:field xpath="@Pre" />
+      <xs:field xpath="@Fol" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="CheckPrimaryKey" name="CheckRecord">
+      <xs:selector xpath=".//Check" />
+      <!-- The key for each entry is the unique combination of vernacular and part-of-speech elements -->
+      <xs:field xpath="@Vern" />
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Lemma" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="LemmaPrimaryKey" name="LemmaRecord">
+      <xs:selector xpath=".//Lemma" />
+      <!-- The key for each entry is the unique combination of vernacular and part-of-speech elements -->
+      <xs:field xpath="@Vern" />
+      <xs:field xpath="@MWcat" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="GenPrimaryKey" name="GenRecord">
+      <xs:selector xpath=".//Gen" />
+      <!-- The key for each entry is the unique combination of POS and parent label -->
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@PrntLabel" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="VernPosPrimaryKey" name="VernPosRecord">
+      <xs:selector xpath=".//VernPos" />
+      <!-- The key for each entry is the unique combination of POS and parent label -->
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Vern" />
+    </xs:key>
+    <!-- The key for each entry is the unique combination of @v and @l -->
+    <!--  ONLY USE WHEN NEEDED!! for [Derive Rewrite] 
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="VernPosVLKey" name="VernPosVL">
+      <xs:selector xpath=".//VernPos" />
+      <xs:field xpath="@v" />
+      <xs:field xpath="@l" />
+    </xs:key>
+       -->
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="CatPrimaryKey" name="CatRecord">
+      <xs:selector xpath=".//Cat" />
+      <!-- The key for each entry is the POS label + Type -->
+      <xs:field xpath="@Pos" />
+      <xs:field xpath="@Type" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="DerivePrimaryKey" name="DeriveRecord">
+      <xs:selector xpath=".//Derive" />
+      <!-- The key for each entry is the POS label -->
+      <xs:field xpath="@Pos" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

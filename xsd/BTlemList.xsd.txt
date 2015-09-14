@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BTlemma" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="BTlemma" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BT">
+          <xs:complexType>
+            <xs:attribute name="l"	type="xs:string" />
+            <xs:attribute name="b"	type="xs:string" />
+            <xs:attribute name="ps"	type="xs:string" />
+            <xs:attribute name="bt"	type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="BTPrimaryKey" name="BTRecord">
+      <xs:selector xpath=".//BT" />
+      <!-- The key for each entry is the lemma and part-of-speech -->
+      <xs:field xpath="@l" />
+      <xs:field xpath="@b" />
+      <xs:field xpath="@ps" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

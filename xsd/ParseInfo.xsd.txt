@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ParseInfo" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ParseInfo" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConstList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Const" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="ConstId"		type="xs:integer" />
+                  <xs:attribute name="Label"		type="xs:string" />
+                  <xs:attribute name="Head"			type="xs:string" />
+                  <xs:attribute name="Children"		type="xs:string" />
+                  <xs:attribute name="Partial"		type="xs:string" />
+                  <xs:attribute name="Example"		type="xs:string" />
+                  <xs:attribute name="Num"			type="xs:integer" />
+                  <xs:attribute name="Freq"			type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="User" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="UserId"	type="xs:integer" />
+                  <xs:attribute name="ConstId"	type="xs:integer" />
+                  <xs:attribute name="Label"	type="xs:string" />
+                  <xs:attribute name="Children"	type="xs:string" />
+                  <xs:attribute name="Html"		type="xs:string" />
+                  <xs:attribute name="Start"	type="xs:integer" />
+                  <xs:attribute name="Len"		type="xs:integer" />
+                  <xs:attribute name="Freq"		type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PartList">
+          <xs:complexType>
+            <xs:sequence>
+			  <!-- Each "Part" contains one @Trigger, and a list of Ptree elements -->
+              <xs:element name="Part" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <!-- Each "Ptree" is a partial tree available for @PartId -->
+                    <xs:element name="Ptree" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="PtreeId"	type="xs:integer" />
+                        <xs:attribute name="PartId"		type="xs:integer" />
+                        <!-- @Path consists of an ancestor (a[i]) and optionally a child (c[j])	-->
+                        <xs:attribute name="Path"		type="xs:string"  />
+                        <!-- @Label is the label of element on this path						-->
+                        <xs:attribute name="Label"		type="xs:string"  />
+                        <!-- Divide @Freq by Part/@Count to get an estimate for a chance		-->
+                        <xs:attribute name="Freq"		type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                    <!-- Each "Rule" is a partial tree available for @PartId -->
+                    <xs:element name="Rule" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="RuleId"		type="xs:integer" />
+                        <xs:attribute name="PartId"		type="xs:integer" />
+                        <!-- @Path consists of an ancestor (a[i]) and optionally a child (c[j])	-->
+                        <xs:attribute name="Path"		type="xs:string"  />
+                        <!-- @Label is the label of element on this path						-->
+                        <xs:attribute name="Label"		type="xs:string"  />
+                        <!-- Divide @Freq by Part/@Count to get an estimate for a chance		-->
+                        <xs:attribute name="Freq"		type="xs:integer" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="PartId"	type="xs:integer" />
+                  <xs:attribute name="Trigger"	type="xs:string" />
+                  <!-- Attribute @Count is the total number of times the @Trigger was found and registered -->
+                  <xs:attribute name="Count"	type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="ConstPrimaryKey" name="ConstRecord">
+      <xs:selector xpath=".//Const" />
+      <!-- This should be a list of the combination that is unique for each record -->
+      <xs:field xpath="@ConstId" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="PtreePrimaryKey" name="PtreeRecord">
+      <xs:selector xpath=".//Ptree" />
+      <!-- This should be a list of the combination that is unique for each record -->
+      <xs:field xpath="@PartId" />
+      <xs:field xpath="@Path" />
+      <xs:field xpath="@Label" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="RulePrimaryKey" name="RuleRecord">
+      <xs:selector xpath=".//Rule" />
+      <!-- This should be a list of the combination that is unique for each record -->
+      <xs:field xpath="@PartId" />
+      <xs:field xpath="@Path" />
+      <xs:field xpath="@Label" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

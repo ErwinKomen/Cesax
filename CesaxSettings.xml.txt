@@ -1,0 +1,212 @@
+<Cesax>
+  <General>
+    <Setting Name="CrpDir" Value="U:\Data Files\Corpora\CorpusStudio">
+    </Setting>
+    <Setting Name="CrpLast" Value="U:\Data Files\Corpora\CorpusStudio\Clefts\xq\CleftBasic_V1_Database.xml">
+    </Setting>
+    <Setting Name="ShowAllAnt" Value="True">
+    </Setting>
+    <Setting Name="UserProPGN" Value="False">
+    </Setting>
+    <Setting Name="ShowCode" Value="True">
+    </Setting>
+    <Setting Name="MaxIPdist" Value="14">
+    </Setting>
+    <Setting Name="ChainDictionary" Value="U:\Settings\ChainDictionary.xml">
+    </Setting>
+    <Setting Name="Debugging" Value="False">
+    </Setting>
+    <Setting Name="UserName" Value="Erwin R. Komen">
+    </Setting>
+    <Setting Name="DriveChange" Value="G&gt;U">
+    </Setting>
+    <Setting Name="LanguageId" Value="1">
+    </Setting>
+    <Setting Name="PsdOutput" Value="u:\data files\corpora">
+    </Setting>
+    <Setting Name="PsdxInput" Value="u:\data files\corpora">
+    </Setting>
+    <Setting Name="WorkDir" Value="D:\Data files\Corpora\English\xml\MyTask">
+    </Setting>
+    <Setting Name="ClearLog" Value="False">
+    </Setting>
+    <Setting Name="KeepGarbage" Value="False">
+    </Setting>
+    <Setting Name="ShowCmd" Value="False">
+    </Setting>
+    <Setting Name="PeriodDefinition" Value="U:\Data Files\Corpora\CorpusStudio\Query\EnglishPeriods.xml">
+    </Setting>
+    <Setting Name="ProfileLevel" Value="0">
+    </Setting>
+    <Setting Name="AbsMaxIPdist" Value="250">
+    </Setting>
+  </General>
+  <PhrTypeList>
+    <PhrType PhrTypeId="12" Node="PP" Type="Can" Target="Dst" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="11" Node="IP" Type="Can" Target="Dst" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="10" Node="NPR$" Type="Can" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="9" Node="ADVP" Type="Can" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="8" Node="NP" Type="Can" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="7" Node="NP*RFL" Type="Must" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="6" Node="NP*PRN" Type="Must" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="5" Node="PRO$" Type="Must" Target="Any" Child="*">
+    </PhrType>
+    <PhrType PhrTypeId="4" Node="NP" Type="Must" Target="Any" Child="*con*">
+    </PhrType>
+    <PhrType PhrTypeId="3" Node="NP" Type="Must" Target="Any" Child="PRO">
+    </PhrType>
+    <PhrType PhrTypeId="2" Node="NP" Type="Must" Target="Any" Child="DPRO">
+    </PhrType>
+    <PhrType PhrTypeId="1" Node="NP" Type="Must" Target="Any" Child="D">
+    </PhrType>
+  </PhrTypeList>
+  <RefTypeList>
+    <RefType RefTypeId="4" Name="Assumed" Descr="There is no referent in the discourse, but there is one in the &quot;common knowledge&quot; assumed to be shared by the author and the reader." Color="Blue">
+    </RefType>
+    <RefType RefTypeId="3" Name="Inferred" Descr="There exists a discourse link, but the referents are not completely identical.&#xA;E.g: part-whole." Color="Brown">
+    </RefType>
+    <RefType RefTypeId="2" Name="Identity" Descr="The referents are identitcal." Color="Green">
+    </RefType>
+    <RefType RefTypeId="1" Name="CrossSpeech" Descr="Any &lt;Identity&gt; relation that crosses a direct speech border (from narrative into direct speech or from direct speech into narrative)." Color="DarkGreen">
+    </RefType>
+    <RefType RefTypeId="5" Name="New" Descr="A completely discourse new referent is introduced." Color="Red">
+    </RefType>
+    <RefType RefTypeId="6" Name="Inert" Descr="The referent in fact represents a class, not an individuel. &#xA;Two important criteria:&#xA;(1) the NP labeled as &quot;Inert&quot; does not refer to one particular referent;&#xA;(2) nothing can refer back to this NP.&#xA;&#xA;Examples of NPs that need to be labelled as &quot;Inert&quot; are the following:&#xA;(a) Bare nominal complements of a &quot;Subject + BE + NP&quot; construction.&#xA;     John is [butcher].&#xA;(b) Bare nominal complements of a PP.&#xA;     Be ware [of sour dough [of pharisees]]." Color="Purple">
+    </RefType>
+    <RefType RefTypeId="7" Name="NewVar" Descr="Introduction of a new variable, e.g. in (SBJ *T*-1).&#xA;This new variable is then referred to from NPs which are c-commanded by it." Color="Orange">
+    </RefType>
+  </RefTypeList>
+  <PronounList>
+    <Pronoun PronounId="17" Name="Pers" Descr="Personal pronoun - any" PGN="unknown" OE="" Notes="There are no pronouns yet ambiguous in such a way, that they cannot be mapped to person, number of gender.">
+    </Pronoun>
+    <Pronoun PronounId="16" Name="Dem" Descr="Demonstrative pronoun - any" PGN="unknown" OE="+[td]a|+[dt]as|+[dt]am|+[td]+am|+[td][iy]sum|+[td][iy]ssum" Notes="Some demonstrative pronouns are indeterminable as to singular/plural.&#xA;That means the only thing we can tell about them at this point is that they are &quot;demonstrative&quot;.&#xA;Their PGN cannot be determined.">
+    </Pronoun>
+    <Pronoun PronounId="15" Name="Dem-p" Descr="Demonstrative pronoun - plural" PGN="3p" OE="+[td]ara|+[td]issa|+[td]isra" ME="+tes*|+tusgate|these|+tise|+tuse|+to|tho|thoo|+tos" eModE="those|these" MBE="those|these">
+    </Pronoun>
+    <Pronoun PronounId="14" Name="Dem-ns" Descr="Demonstrative pronoun - neuter singular" PGN="3ns" OE="+[td]+at|+[td]is" eModE="">
+    </Pronoun>
+    <Pronoun PronounId="13" Name="Dem-fs" Descr="Demonstrative pronoun, feminine singular" PGN="3fs" OE="seo|sio|+[td]+are|+[td]eos|+[td][iy]sse|+[td][iy]s*re|+[td]are" ME="to" Notes="The form +tas is ambiguous, so is taken at the general &quot;Dem&quot;.&#xA;The form +ta is ambiguous too.&#xA;to: And (Jesus) took +tane wynd and [to] see [cmkentse, 219.143]">
+    </Pronoun>
+    <Pronoun PronounId="12" Name="Dem-ms" Descr="Demonstrative pronoun - masculine singular" PGN="3ms" OE="se|+[td]one|+[td]es|+[td][iy]sne|+[td]e|+[td][iy]os*n" ME="si|o|+tane|+tan" Notes="Forms +t+as, +tam/+t+am and +ty/+ton may be masculine or neuter, so are taken with &quot;Dem-s&quot;&#xA;There is +tiosan, which I take to be dative, masculine, singular, as in: &quot;on +tiosan middangearde&quot;.">
+    </Pronoun>
+    <Pronoun PronounId="11" Name="Dem-s" Descr="Demonstrative pronoun - singular" PGN="3s" OE="+[td]+as|+[td]y|+[td]on|+[dt]ises|+[td]isses|+[td]ys" ME="+t[ae]t|+tis|ano*t*r|+tt|that|th[yi]s|tis|+tus|ano+tres" eModE="that|this" MBE="that|this|another" Notes="Most of these forms are ambiguous between masculine and neuter">
+    </Pronoun>
+    <Pronoun PronounId="10" Name="Pers-3p" Descr="Personal pronoun - third person plural" PGN="3p" OE="hi*ra|her|here|th*m|+th*m|+t*ei|+t*ey|hem|+tey+g|heom|thems*|the*r|hyra|heora|heore|hera|hiore|hyora|heoran|h+aora|hir+a" ME="+te*r*|+tems*|tey|thei*|they*|+taire|+tair|+tar|+gar|+tayre|thaire|hij" eModE="they|them|their|'em|hem|thier" MBE="they|them|their|themselves|there">
+    </Pronoun>
+    <Pronoun PronounId="9" Name="Pers-3ns" Descr="Personal pronoun - third person neuter singular" PGN="3ns" OE="it*|y*t*|id|*'t|h*t" ME="hits*|som*w*t" eModE="it|its|hit|hits*" MBE="it|its|itself" Notes="">
+    </Pronoun>
+    <Pronoun PronounId="8" Name="Pers-3fs" Descr="Personal pronoun - third person feminine singular" PGN="3fs" OE="sh*|sch*|her|heo|hi|hir|hire|hig|hio|hiere|hyre|hier-s*|hyra|hera|hiore|hyora|heoran|h+aora|hir+a" ME="hir*se*|hyr|hirs" eModE="she|her|hyr|hers" MBE="she|her|herself|her's|h." Notes="The form &quot;hie&quot; is feminine singular, but also common plural...&#xA;The form &quot;h.&quot; can be her or his majestys">
+    </Pronoun>
+    <Pronoun PronounId="7" Name="Pers-3ms" Descr="Personal pronoun - third person masculine singular" PGN="3ms" OE="he|hee|his|ha|ham|hy|hym|hyne|hi*ne|ham-s*|h[iy]m*s*|hys|sin|hise" ME="him|h[iy]s*|heem|h*m*s*l[fv]*|hes|hin|is|ise" eModE="he|h[iy]s|h[iy]m|him*s*|hy~" MBE="he|his|him|himself|h." Notes="I am assuming that &quot;him&quot; is 3ms starting from Middle English">
+    </Pronoun>
+    <Pronoun PronounId="6" Name="Pers-3" Descr="Personal pronoun - third person" PGN="3" OE="hie|him" ME="" Notes="The form &quot;hie&quot; is feminine singular, but also common plural...&#xA;The form &quot;him&quot; can in OE either be 3ms(dative) or 3p(genitive)&#xA;">
+    </Pronoun>
+    <Pronoun PronounId="5" Name="Pers-2p" Descr="Personal pronoun - second person plural" PGN="2p" OE="+ge*|gho|+gi*|inc*|iow*|eow*|ge" ME="+gour*|+gow*|hye|yure|yu|yw" eModE="+ge*|+gour*|+gow*" MBE="y*r*">
+    </Pronoun>
+    <Pronoun PronounId="4" Name="Pers-2s" Descr="Personal pronoun - second person singular" PGN="2s" OE="+[dt]e|+[dt]ee|+[td]i*|+[td]u*|+[td]y*|thou*|thow*|+[td][iy]n*" ME="+te|+tee|+tisel*|+tou|+tow|ti|+ti|tow|tu|ye|yow|thyn|thy|thi|thine|thin|thyne" eModE="+ti|tow|the|thee|thy*|y*r*" MBE="y*r*">
+    </Pronoun>
+    <Pronoun PronounId="3" Name="Pers-2" Descr="Personal pronoun - second person, any number" PGN="2" OE="you*|iur*" eModE="" MBE="">
+    </Pronoun>
+    <Pronoun PronounId="2" Name="Pers-1p" Descr="Personal pronoun - first person plural" PGN="1p" OE="u*s|wit|unc*|ure|v*s|urne|urum|ura|uren|us*|urra|hures|uran|ys|urre|unkerne|we" ME="our*|ower*|owr*|us*s*l*|vnc|vr*|vs*l*|we*|hure" eModE="we|our*|us" MBE="we|our*|us">
+    </Pronoun>
+    <Pronoun PronounId="1" Name="Pers-1s" Descr="Personal pronoun - first person singular" PGN="1s" OE="me*|mi*|my*|ic*" ME="I|y|hic" eModE="I|me|my|ch" MBE="I|me|my">
+    </Pronoun>
+  </PronounList>
+  <LangDef>
+    <Language LanguageID="2" Name="Dutch">
+      <VernChar>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+0123456789</VernChar>
+      <VernStart>$</VernStart>
+      <VernEnd>=</VernEnd>
+      <VernIntm>-:</VernIntm>
+      <Punct>.,?!:;'/-"`</Punct>
+    </Language>
+    <Language LanguageID="1" Name="OldEnglish">
+      <VernChar>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+0123456789</VernChar>
+      <VernStart>.&amp;</VernStart>
+      <VernEnd>=.</VernEnd>
+      <VernIntm>-: ='.~`</VernIntm>
+      <Punct>.,?!:;'/-"\&amp;|</Punct>
+    </Language>
+  </LangDef>
+  <NPfeatList>
+    <NPfeat NPfeatId="3" Name="GrRole" Descr="Grammatical roles" Variants="Subject;The grammatical subject&#xA;Agent;The PP complement of &quot;by&quot; in a passive&#xA;Argument;An NP argument of the verb that is not the subject&#xA;Oblique;An NP whose type cannot be readily determined&#xA;PPobject;An NP that is an object of a Prepositional Phrase&#xA;PossDet;A possessive (genitive) NP functioning as the determiner of another NP&#xA;None;An NP that has no grammatical role, and cannot refer to something (e.g: reference)&#xA;unknown;A constituent whose grammatical role cannot be determined">
+    </NPfeat>
+    <NPfeat NPfeatId="1" Name="NPtype" Descr="The kind of NP, e.g. definite or not" Variants="ZeroSbj;Subject elided under coordination&#xA;Pro;Personal pronoun&#xA;DefNP;Definite NP&#xA;Dem;Demonstrative pronoun (independant)&#xA;DemNP;An NP headed by a demonstrative pronoun&#xA;Proper;A proper noun&#xA;IndefNP;Indefinite NP&#xA;Bare;A bare noun, which might be indefinite or not&#xA;QuantNP;Quantificational NP&#xA;unknown;Unknown type of NP&#xA;">
+    </NPfeat>
+    <NPfeat NPfeatId="2" Name="PGN" Descr="Person, Gender and Number" Variants="1p;First person plural&#xA;1s;First person singular&#xA;2;Second person (plural or singular)&#xA;2p;Second person plural&#xA;2s;Second person singular&#xA;3;Third person (undetermined gender and number)&#xA;3fs;Third person feminine singular&#xA;3ms;Third person masculine singular&#xA;3ns;Third person neuter singular&#xA;3p;Third person plural&#xA;3s;Third person singular&#xA;unknown;Unknown person, gender and number&#xA;empty;Takes the person/gender/number of the constituent it is bound to">
+    </NPfeat>
+  </NPfeatList>
+  <ConstraintList>
+    <Constraint ConstraintId="16" Name="NearDem" Descr="One violation for an antecedent that already has a coreference, unless the antecedent NP also contains a near demonstrative" Mult="2" Level="10">
+    </Constraint>
+    <Constraint ConstraintId="14" Name="AgrClause" Descr="One violation mark when a source does not have PGN 3s/3ns, yet does agree with an antecedent IP." Mult="2" Level="8">
+    </Constraint>
+    <Constraint ConstraintId="13" Name="NoCataphore" Descr="One violation for an antecedent that is following the source instead of preceding it." Mult="2" Level="4">
+    </Constraint>
+    <Constraint ConstraintId="1" Name="AgrGenderNumber" Descr="One violation when gender/number of source disagree with gender/number of antecedent." Mult="2" Level="1">
+    </Constraint>
+    <Constraint ConstraintId="2" Name="Disjoint" Descr="One violation when src+target are in the same IP MAT/SUB/SMC" Mult="2" Level="2">
+    </Constraint>
+    <Constraint ConstraintId="3" Name="EqualHead" Descr="One violation when the src head noun does not agree with any of the head nouns in the chain of the target" Mult="2" Level="3">
+    </Constraint>
+    <Constraint ConstraintId="4" Name="IPdist" Descr="One violation for every IP between Src and Target&#xA;(Changed level from 7 -&gt; 14, so that it is below AgrPerson)" Mult="20" Level="13">
+    </Constraint>
+    <Constraint ConstraintId="5" Name="GrRoleDst" Descr="Assign a preferential number (between 0 and 3) to the grammatical role of an NP.&#xA;&#xA;Rationale: subject is more likely to be referred back to than an argument or a PP object.&#xA;&#xA;Make use of the following scale:&#xA;	Subject &gt; PossDet;Argument &gt; PPobject &gt; other&#xA;&#xA;" Mult="4" Level="14">
+    </Constraint>
+    <Constraint ConstraintId="6" Name="NPtypeDst" Descr="Assign a preferential number (between 0 and 5) to the NP type of the antecedent. &#xA;&#xA;Rationale: this approximately follows the NP type hierarchy.&#xA;&#xA;Make use of the following scale:&#xA;&#xA;   Zero &gt; Pro &gt; Proper &gt; DefNP;AnchoredNP &gt; DemNP &gt; Other" Mult="6" Level="15">
+    </Constraint>
+    <Constraint ConstraintId="7" Name="NoCrossAgrPerson" Descr="One violation when there is agreement in person at a cross speech boundary." Mult="2" Level="9">
+    </Constraint>
+    <Constraint ConstraintId="8" Name="NoCrossEqSubject" Descr="One violation when source and antecedent are both subject and cross a speech boundary.&#xA;OR&#xA;One violation when the source's IP is imperative, the source itself is an argument and the antecedent is a subject.&#xA;&#xA;Rationale: You can NOT point back from a subject inside a SPEECH IP to the subject of the preceding non-speech IP." Mult="2" Level="25">
+    </Constraint>
+    <Constraint ConstraintId="9" Name="AgrPerson" Descr="One violation when the source has a different person than the antecedent." Mult="2" Level="11">
+    </Constraint>
+    <Constraint ConstraintId="10" Name="ProTop" Descr="(Not yet implemented)" Mult="2" Level="30">
+    </Constraint>
+    <Constraint ConstraintId="11" Name="FamDef" Descr="(Not yet implemented)" Mult="2" Level="35">
+    </Constraint>
+    <Constraint ConstraintId="12" Name="Cohere" Descr="(Not yet implemented)" Mult="2" Level="40">
+    </Constraint>
+    <Constraint ConstraintId="15" Name="NoClause" Descr="One violation for an antecedent that is a clause (IP)." Mult="2" Level="5">
+    </Constraint>
+  </ConstraintList>
+  <CategoryList>
+    <Category CatId="9" Name="Adv-Doubt" Descr="&lt;Add your description here&gt;" Type="Doubt" OE="" ME="" eModE="probably|perhaps|semblably" MBE="probably" Notes="This category was added automatically on 17-12-2010 0:00">
+    </Category>
+    <Category CatId="1" Name="SpeechIntro" Descr="Verbs that introduce indirect speech" OE="quo*" ME="ask*|say*|sai*|answ*|repl[iy]*" Notes="Keep the name [SpeechIntro], as this is recognized as such by the program&#xA;">
+    </Category>
+    <Category CatId="2" Name="HumanHeadNoun" Descr="Nouns that can serve as head of an NP denoting a human" OE="man" ME="human|men|person|people" Notes="The name of this category should be kept at [HumanHeadNoun] for proper working of the algorithm.&#xA;This serves to verify one suspicious situation: ProNoHuman.&#xA;In this situation a pronominal source links to a nominal antecedent, while this antecedent is not a human. &#xA;Such a referential situation is possible, but not very likely, and therefore needs verification.">
+    </Category>
+    <Category CatId="3" Name="Adv-Emph" Descr="Adverb within an NP or PP that is used for emphasis" Type="Emph" OE="fur+don|for+don|hr+a+de|huru|fur+dan|hra+de|fur+tan|fur+ton|efne|fur+dum|eac|full|ra+te|ra+de|riht|emne|eallunga|ungemet|hra+te|for+den|ryhte|fur+tum|$ra+de|ful|hure|fur+dun" ME="ry+gt|riht|euer|singulerly|specially|ri+gt|euen|euene|right|richtes|eauer|richt|$eauer|evere|spacialliche|ryght|specialy|rith|streit|rite|speciali|fast|sekirly|verray|certes|righte|pryncypally|ryghte|reghte|euere|strayt|evyn|verry|strayght|very|fulle|deope|specyally|anan-riht|euyr|euyn|rygth|specyal|ryth|synderlice|for+ton|even|streyght|well|streyte|clene|$riht|swi+de|pryncypaly|specyaly|wiss|rihht|specialliche|specialli|principally|ay|enterely|speycyally|eure|for+t+an|aure" eModE="just|even|especially|marveilous|specialli|fast|quite|speciallie|namelie|euen|oft|directly|chiefely|eue~|ever|perfectly|right|directlie|iust|diametrally|ryghte|ryght|euin|deep|chiefly|very|strait|particularly|directely|chieflie|specyallye|sound|verie|especiallie|straight|straite|sodainely|dyrectlie|clene|excellent|especialy|speciallye|streyght|soone|specyally|shortly|juste|clean|streight|strayght|straught|exactly|eve~|esspetiallye|$espeatially|utterly|flat|$very|welle|espetially|ful|spetiall|espetialy|especyall|euyn|eene|e'ne|ee'ne|eev'n|espeshallie|verye|faste|full|perticularly|iuste|righte|cheifely|vast|streighte|and|evyn|especiallye|streght|een|chiefe|evyne|e'en|meanly|rygth|eue=r=" MBE="directly|strait|quite|exactly|altogether|scarcely|purely|entirely|still|exclusively|simply|absolutely|precisely|surely|infinitely|plainly|apparently|clear|essentially|certainly|notably|principally|mainly">
+    </Category>
+    <Category CatId="4" Name="Adv-Contr" Descr="Adverb within an NP or a PP that is used for contrast" Type="Contr" OE="elles|ana|$ana|buton|butan|ane|buten|+alles|+aalles|butun" ME="only|but|alone|onlyche|bote|oonly|bute|+tach|+get|$bute|anes|an|yet|onlepi|bot|one|yit|oneliche|onliche|+to|onely|onelich|on|+git|allone|alon|onlich|anely|anley|ellis|on~ly|allanly|oonli|botte|onlye|anly|ellys|anen|enelpi|$only|oneli|elless|$but|alane|allane|tah|+giet" eModE="only|alone|but|oonly|onely|onelie|yet|meerely|onelye|onlye|meerly|onlie|$onlye|solely|eune|alonly|merely|aloane|singuler|$only|oonelie" MBE="besides">
+    </Category>
+    <Category CatId="5" Name="Adv-Loc" Descr="Adverb within an NP or a PP that is used for location or direction" Type="Loc" OE="foran|westan|ufan|eastan|su+dan|su+tan|nor+tan|nor+dan|easton|ufon|w+astan|+astan|hindan|forne|innan|su+taneastan|nor+tanwestan|nor+taneastan|westannor+tan|westannor+dan|westansu+dan|$westansu+dan|uppan|mid" ME="here|awey|wi+duten|for+d|awaye|owai|to-fore|rounde|in-wi+d|bineo+den|hom|for+de|aboue|high|$+ter|for+t|home|+tere|away|heuenly|wi+tynne" eModE="there|abrode|round|before|ther|back|above|hither|heere|thence|away|backe|aboue|abroade|foorth|heare|abroad|alongst|cross|$nere|bake|rond|rownd|forth|hence|$there|thenceforth|behind|hidder|rounde|awaye|alonge|rownde|uppermoste" MBE="back|upright|midway|high|astride|halfway">
+    </Category>
+    <Category CatId="6" Name="Adv-Degree" Descr="The degree to which some NP or PP is involved" Type="Degree" OE="fornean|hwene|neah|wene|huhugu|forneah|fulneah|folneah|ecan|lang|eacan|hw+ane|forn+ah" ME="ofte|wel|almoost|a-bowte|nyghe|nygh|almost|wele|aboute|nyh|almest|oft|abowte" eModE="about|almost|almoste|cleane|scarse|wyde|partly|neere|wholly|near|scarce|aboute|hard|ouer|scant|almoost|nere|mostly|abought|partlie|partely|aboght|allmost|sonne|exceedingly|absolute|abouth|$partely|a-bowt|bowt|unmeasurably|abowt|short|wholely|neare|abowte|wholy|hardlie|excedyng|abowzt" MBE="partly|$about|almost|over|considerably|nearly|barely|slightly|hardly|fairly|headlong|great|close" Notes="This category was added automatically on 17-12-2010 0:00">
+    </Category>
+    <Category CatId="7" Name="Adv-(empty)" Descr="Adverb or FP without a lexical item" Type="(empty)" OE="*ich*-2" ME="*ich*-2|$+tus|o+derweis|togedere|ely|ye|+te" eModE="*ich*-2|*ich*-1|*ich*-4|*ich*-3|*ich*-5|*ich*-7|*ich*-9|*t*-3|*ich*-11|*ich*-10" MBE="*ich*-2" Notes="This categroy should not exist. There should not be &quot;empty&quot; adverbs or FPs.&#xA;However, there are!">
+    </Category>
+    <Category CatId="8" Name="Adv-Manner" Descr="The manner by which a particular NP is modified" Type="Manner" OE="swa|$swa|swilce|tog+adere|swylce|swylc|+atg+adre|su+a|somed|+dyllice|gelice|sw+a|samod|swaswa|ealswa|sua|samad|somod|+tus|mistlice" ME="stedfaste|alswa|nomeliche|togederes|asswa|imene|fleschliche|nomelich|to|aswa|vnmeteliche|unhendeliche|alse|ylike|onlepiliche|alsuo|zuo|ary+gt|ari+gt|gostliche|aiont|so|iliche|deedly|togidre|to-gidres|lyke|leke|parfytliche|vuel|also|alwey|holy|to-+gederes|al-swa|sore|unnea+de|opinli|togyder|els|to-gederes|lych|lech|lyk|liche|lyche|gastliche|alrihtes|like|merveillous|false|thus|worldely|passyng|togidres|togidrere|togidere|to-gidere|hard|lik|unne+de|to-gedere|swo|togydre|freely" eModE="along|together|like|so|lyke|togither|$thus|violently|well|truely|soo|harde|soe|by|$like|sore|wronge|dearly|truly|generally|antecedently|wonder|perfect|lycke" MBE="aloud|affec=tely=|alike|separately|necessarily|independently|inversely|carefully|miserably|certain|pretty|mighty|equally|provisionally|dear" Notes="Examples: &#xA;(1) [Along] with him --&gt; answers question &quot;How?&quot;&#xA;">
+    </Category>
+    <Category CatId="10" Name="Adv-Time" Descr="&lt;Add your description here&gt;" Type="Time" OE="instepes|gio|fulhr+a+de|gyrstan|somne|lange|longe" ME="now|sone|anan|efter|anon|a-gain|a+geyne|anone|immediatly|before|bifore|byfore|nov|furst|befor|a-non|be-for|often|inmedyatly|sy+d+den|er|offte|anoon|onan|+afre|son|soone|a+gen|forsayd|onane|nu|ferren|anaon" eModE="then|daily|now|often|presently|earely|sone|im~ediately|immediately|than|fyrste|nowe|after|formerly|already|incontynent|anon|incontinente|foorthwyth|immediatelye|incontinent|oftyn|last|presentely|shortlye|tomorowe|immediatly|$now" MBE="soon|early|again|once|quickly|nightly" Notes="This category was added automatically on 28-1-2011 0:00">
+    </Category>
+    <Category CatId="11" Name="Adv-Unknown" Descr="&lt;Add your description here&gt;" Type="Unknown" OE="" ME="wes|a|+ta|onre" eModE="trewelie|promiscuously|anone|thyn|withall|newe|new|cholmly" MBE="" Notes="This category was added automatically on 28-1-2011 0:00">
+    </Category>
+    <Category CatId="12" Name="Adv-Negation" Descr="&lt;Add your description here&gt;" Type="Negation" OE="" ME="ny|never|neauer|neo+der|neuer|ni+ter|ni+der" eModE="neuer|non|ne're|never" MBE="" Notes="This category was added automatically on 28-1-2011 0:00">
+    </Category>
+    <Category CatId="13" Name="Adv-Specifying" Descr="&lt;Add your description here&gt;" Type="Specifying" OE="" ME="nameli|nameliche|namely|namelye|namelych|nomely|namly|namliche" eModE="namely" MBE="" Notes="This category was added automatically on 28-1-2011 0:00">
+    </Category>
+    <Category CatId="14" Name="Adv-Number" Descr="&lt;Add your description here&gt;" Type="Number" OE="" ME="thries|first|fyrst|+arest" eModE="fourth" MBE="extra" Notes="This category was added automatically on 28-1-2011 0:00">
+    </Category>
+    <Category CatId="15" Name="Adv-Additive" Descr="&lt;Add your description here&gt;" Type="Additive" OE="" ME="allswa" eModE="" MBE="" Notes="This category was added automatically on 17-2-2011 0:00">
+    </Category>
+  </CategoryList>
+</Cesax>

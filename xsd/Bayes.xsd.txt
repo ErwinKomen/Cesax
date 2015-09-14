@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Bayes" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Bayes" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ActPred">
+          <xs:complexType>
+            <xs:attribute name="ActPredId"	type="xs:integer" />
+            <xs:attribute name="Actual"		type="xs:string" />
+            <xs:attribute name="Pred"		type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Naive">
+          <xs:complexType>
+            <xs:attribute name="NaiveId"	type="xs:integer" />
+            <xs:attribute name="Fname"		type="xs:string" />
+            <xs:attribute name="Fvalue"		type="xs:string" />
+            <xs:attribute name="Class"		type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="ActPredKey" name="ActPredRecord">
+      <xs:selector xpath=".//ActPred" />
+      <!-- The key for each <ActPred> element is the @name value -->
+      <xs:field xpath="@ActPredId" />
+      <xs:field xpath="@Actual" />
+      <xs:field xpath="@Pred" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="NaiveKey" name="NaiveRecord">
+      <xs:selector xpath=".//Naive" />
+      <!-- The key for each <Naive> element is the @name value -->
+      <xs:field xpath="@NaiveId" />
+      <xs:field xpath="@Fname" />
+      <xs:field xpath="@Fvalue" />
+      <xs:field xpath="@Class" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

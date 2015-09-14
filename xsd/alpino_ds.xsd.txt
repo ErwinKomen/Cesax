@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="alpino_ds" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="node">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="node" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="begin"	type="xs:integer" />
+      <xs:attribute name="end"		type="xs:integer" />
+      <xs:attribute name="index"	type="xs:integer" />
+      <xs:attribute name="id"		type="xs:integer" />
+      <xs:attribute name="frame" type="xs:string" />
+      <xs:attribute name="lcat" type="xs:string" />
+      <xs:attribute name="lemma" type="xs:string" />
+      <xs:attribute name="pos" type="xs:string" />
+      <xs:attribute name="postag" type="xs:string" />
+      <xs:attribute name="pt" type="xs:string" />
+      <xs:attribute name="rel" type="xs:string" />
+      <xs:attribute name="root" type="xs:string" />
+      <xs:attribute name="sense" type="xs:string" />
+      <xs:attribute name="word" type="xs:string" />
+      <xs:attribute name="aform" type="xs:string" />
+      <xs:attribute name="buiging" type="xs:string" />
+      <xs:attribute name="graad" type="xs:string" />
+      <xs:attribute name="infl" type="xs:string" />
+      <xs:attribute name="naamval" type="xs:string" />
+      <xs:attribute name="pdtype" type="xs:string" />
+      <xs:attribute name="positie" type="xs:string" />
+      <xs:attribute name="vform" type="xs:string" />
+      <xs:attribute name="vwtype" type="xs:string" />
+      <xs:attribute name="lwtype" type="xs:string" />
+      <xs:attribute name="npagr" type="xs:string" />
+      <xs:attribute name="gen" type="xs:string" />
+      <xs:attribute name="genus" type="xs:string" />
+      <xs:attribute name="getal" type="xs:string" />
+      <xs:attribute name="ntype" type="xs:string" />
+      <xs:attribute name="num" type="xs:string" />
+      <xs:attribute name="rnum" type="xs:string" />
+      <xs:attribute name="cat" type="xs:string" />
+      <xs:attribute name="sc" type="xs:string" />
+      <xs:attribute name="wvorm" type="xs:string" />
+      <xs:attribute name="numtype" type="xs:string" />
+      <xs:attribute name="special" type="xs:string" />
+      <xs:attribute name="conjtype" type="xs:string" />
+      <xs:attribute name="wh" type="xs:string" />
+      <xs:attribute name="pvagr" type="xs:string" />
+      <xs:attribute name="pvtijd" type="xs:string" />
+      <xs:attribute name="tense" type="xs:string" />
+      <xs:attribute name="persoon" type="xs:string" />
+      <xs:attribute name="status" type="xs:string" />
+      <xs:attribute name="vztype" type="xs:string" />
+      <xs:attribute name="stype" type="xs:string" />
+      <xs:attribute name="case" type="xs:string" />
+      <xs:attribute name="def" type="xs:string" />
+      <xs:attribute name="per" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="alpino_ds" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sentence" type="xs:string" minOccurs="0" />
+        <xs:element ref="node"		minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="comments" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="comment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

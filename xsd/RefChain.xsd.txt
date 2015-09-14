@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RefChain" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="RefChain" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Setting" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Value" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ChainList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Chain" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="ChainId" type="xs:integer" />
+                        <xs:attribute name="ItemId" type="xs:integer" />
+                        <xs:attribute name="eTreeId" type="xs:integer" />
+                        <xs:attribute name="forestId" type="xs:integer" />
+                        <xs:attribute name="IPmatId" type="xs:integer" />
+                        <xs:attribute name="IPclsId" type="xs:integer" />
+                        <xs:attribute name="IPclsLb" type="xs:string" />
+                        <xs:attribute name="IPnum" type="xs:integer" />
+                        <xs:attribute name="DistForest" type="xs:integer" />
+                        <xs:attribute name="DistIPnum" type="xs:integer" />
+                        <xs:attribute name="Loc" type="xs:string" />
+                        <xs:attribute name="RefType" type="xs:string" />
+                        <xs:attribute name="Syntax" type="xs:string" />
+                        <xs:attribute name="NPtype" type="xs:string" />
+                        <xs:attribute name="GrRole" type="xs:string" />
+                        <xs:attribute name="PGN" type="xs:string" />
+                        <xs:attribute name="SbjRefAll" type="xs:string" />
+                        <xs:attribute name="SbjRefMat" type="xs:string" />
+                        <xs:attribute name="SbjRefMat3" type="xs:string" />
+                        <xs:attribute name="Node" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="ChainId"		type="xs:integer" />
+                  <xs:attribute name="Len"			type="xs:integer" />
+                  <xs:attribute name="RootEtreeId"	type="xs:integer" />
+                  <xs:attribute name="NoTraceLen"	type="xs:integer" />
+                  <xs:attribute name="Animacy"		type="xs:string"  />
+                  <xs:attribute name="PGN"			type="xs:string"  />
+                  <xs:attribute name="SbjIsProt"	type="xs:integer" />
+                  <xs:attribute name="SbjCount"		type="xs:integer" />
+                  <xs:attribute name="SbjSwProtX"	type="xs:integer" />
+                  <xs:attribute name="ProAll"		type="xs:integer" />
+                  <xs:attribute name="ProSbj"		type="xs:integer" />
+                  <xs:attribute name="NmeSbj"		type="xs:integer" />
+                  <xs:attribute name="SbjZero"		type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StatList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Stat" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StatId" type="xs:integer" />
+                  <xs:attribute name="File" type="xs:string" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="From" type="xs:integer" />
+                  <xs:attribute name="Until" type="xs:integer" />
+                  <xs:attribute name="Count" type="xs:integer" />
+                  <xs:attribute name="Total" type="xs:integer" />
+                  <xs:attribute name="Type" type="xs:string" />
+                  <xs:attribute name="Column" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

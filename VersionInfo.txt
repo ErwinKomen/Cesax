@@ -1,0 +1,101 @@
+ 7/jul/2015: Added: convert Alpino xml (partly dependency) to Psdx
+22/jun/2015: Added SoNaR type meta-data support
+26/may/2015: Added "File/New", allowing sentencing + tokenization of text > psdx
+13/feb/2015: Bugfix: .SelectionFont problem in modEditor (for Chinese)
+30/dec/2014: Bugfix: last text must also be saved in Corpus Features To Texts
+22/dec/2014: Added: clicking dictionary source feature results in automatically navigating to appropriate URL
+20/nov/2014: Bugfix: re-numbering of @forestId and @Location 
+10/nov/2014: Added: adapt @forestId and @Location upon Syntax/Re-analyze
+ 7/nov/2014: Changed: F9 feature editing has been generalized and extended to all features of all types
+ 3/oct/2014: Added: extended handling of metadata addition (General>OtherMetaData>ProcessDirectory)
+19/sep/2014: Bugfix: converting psdx>FoLiA should allow any language
+16/sep/2104: Bugfix in StringColl.DelItem () and NodeColl.DelItem()
+26/aug/2014: Bugfix: clear 'metadata' before opening a new file
+25/aug/2014: Show dictionary meaning of OE, ME
+25/aug/2014: Added Corpus/AddFeature
+10/jul/2014: Alfa-testing: Export/Import database features + #features > 24
+ 8/jul/2014: Bugfix: command "u" may not allow moving too high
+ 8/jul/2014: Bugfix: command Syntax/Re-analyze removes bad <forest> sisters
+ 2/jun/2014: Added Corpus/FeaturesToTexts
+29/apr/2014: Bugfix: command "u" in syntax tree editing
+21/apr/2014: Added "undo" function (Ctrl+Z) for syntax tree editing
+21/apr/2014: Restore: scrolling ability from 15/apr
+21/apr/2014: Bugfix: manual changes in category must be processed
+20/apr/2014: Bugfix: allow changing the "Cat" value in Corpus database view
+15/apr/2014: Scrolling Next/Prev in the Syntax and the Tree tab pages
+ 7/apr/2014: Deal with CR/LF for Corpus/Report command
+ 5/apr/2014: Add result of File/SaveAs to Recent list too
+ 3/apr/2014: Bugfix: psd lines without any ( or ) bracket are to be ignored
+ 3/apr/2014: Log information in GetIpNumber and GetFirstForest
+ 1/apr/2014: Added conversion from Adelheid > xml
+ 1/apr/2014: Bugfix: CONLLX > NL conversion needs to recognize breaks better
+25/mar/2014: Switch from VS2008 to VS2010
+20/mar/2014: Bugfix: textid and filename of chunk-parse File/Import
+18/mar/2014: Bugfix: Chunk-parsed PSD input
+18/mar/2014: Improved conversion from PSD to PSDX to avoid "out of memory"
+17/mar/2014: Extended Corpus/Report csv output with the target clause
+17/mar/2014: Added selection of back translation language
+14/mar/2014: Added conversion from psdx to FoLiA (without coreferencing)
+ 6/mar/2014: Added "g(lue)" command to tree editor
+24/feb/2014: Memory leakage while converting folia > psdx
+24/feb/2014: Added conversion from "Folia" to "Psdx" (Tools/Converters)
+ 4/feb/2014: Added batch conversion of Tiger to Psdx
+31/jan/2014: Added View/Lemma as well as lemma + definition for OE
+17/jan/2014: Bugfix corpus find/replace when corpus is not properly initialized
+14/jan/2014: Back to before 10/jan for workshop
+10/jan/2014: Few minor adjustments for conversions + Qstack improvements
+22/nov/2013: Bugfix: importing chunk-parsed PSD files with LRB and RRB
+19/nov/2013: Bugfix Corpus/PrepareSPSS flushing 
+18/nov/2013: Better handling of large databases
+13/nov/2013: Bugfix of Syntax/Parse
+11/nov/2013: Bugfix: dependency-show
+ 7/nov/2013: Bugfix: textId for chunk-parsed PSD file import
+ 5/nov/2013: Added File/Import for chunk-parsed PSD files
+ 2/nov/2013: Added query condition export to CorpusStudio (version 1)
+31/oct/2013: bugfix: double-clicking in corpus database results should locate the file
+ 7/oct/2013: bugfix: selection of correct results in corpus databases
+ 3/oct/2013: bugfix: feature list was not created for Corpus/Filter
+ 1/oct/2013: bugfix: double-clicking on the corpus dbase
+27/sep/2013: Changed corpus result database internal engine to XmlDocument for speed
+26/sep/2013: bugfix in Syntax/Parse (conversion from dependency to phrase structure)
+23/sep/2013: bugfix: when user changes [Status], do not set it to [Changed]
+23/sep/2013: Added auto-status-changed feature for corpus databases
+17/sep/2013: Added Syntax/Parse 
+16/sep/2013: display fix for tab page Corpus Results
+16/sep/2013: bugfix for Syntax/DutchPOStoConLLX
+ 5/sep/2013: Conversie CONLXX > NL 
+ 3/sep/2013: Added Syntax/DutchConLLX conversion
+ 2/sep/2013: Added Corpus/FindAndReplace (Ctrl+F3)
+22/aug/2013: Do not allow non-TEI files to be opened using File/Open
+22/aug/2013: Added Corpus/Filter command (using Xpath)
+20/aug/2013: Added Tools/CONLLXtoPsdx which works for Spanish CONLLX
+18/jul/2013: Improvement of coreference resolution: include NP-forests
+15/jul/2013: Added feature characteristics selection for SPSS
+08/jul/2013: HasPeriod should accept a filename with an apostrophe
+08/jul/2013: deal with alternative file names when double-clicking in Database Corpus
+21/jun/2013: facilitate database addition of "pde" field
+13/jun/2013: improved jumping from database entry to source file
+19/apr/2013: bugfix Corpus/CopyAnnotation due to feature increase
+18/apr/2013: Extended number of corpus features to 24
+12/apr/2013: bugfix Corpus/CopyAnnotation with [] brackets
+12/apr/2013: Added Reference/InterraterAgreement
+ 9/apr/2013: bugfix CorpusResults tab page
+28/mar/2013: bugfix RefWalk processing of (in)animate changes
+26/mar/2013: added Tools/English command, addressing unicode problem
+14/mar/2013: added Tools/German command
+31/jan/2013: added Syntax and subsidiaries to menu
+29/jan/2013: added Tools/OEtaggedFeatures
+23/jan/2013: different processing of "verb type"
+21/jan/2013: added feature handling "proposition lemma"
+15/jan/2013: added feature handling "verb type" (unacc or other)
+15/jan/2013: added Corpus/PrepareTIMBL 
+14/jan/2013: added "Clear" button on Corpus/CopyAnnotation
+11/jan/2013: bugfix selecting database after sorting
+10/jan/2013: extended number of user features for Dbase
+ 8/jan/2013: added editing in Tree tab page
+ 2/jan/2013: bugfix feature value changes Corpus Dbase
+11/dec/2012: added Corpus/CopyAnnotation13
+11/dec/2012: bugfix in DgvHandle/SetItem
+27/nov/2012: added View/Glossed text
+22/nov/2012: added file count for D[corp] in Corpus/Clefts
+11/okt/2012: added Reference/TopicGuessing

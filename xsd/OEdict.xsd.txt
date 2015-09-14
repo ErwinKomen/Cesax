@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OEdict" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OEdict" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EntryList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Entry" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sense" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="EntryId"	type="xs:integer" />
+                        <xs:attribute name="SenseId"	type="xs:integer" />
+						<xs:attribute name="l"			type="xs:string" />
+                        <xs:attribute name="N"			type="xs:integer" />
+                        <xs:attribute name="Pos"		type="xs:string"  />
+						<xs:attribute name="Cf"			type="xs:string" />
+                        <xs:attribute name="Def"		type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="LexFun" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="EntryId"	type="xs:integer" />
+                        <xs:attribute name="LexFunId"	type="xs:integer" />
+                        <xs:attribute name="lf"			type="xs:string" />
+                        <xs:attribute name="lv"			type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="EntryId"	type="xs:integer" />
+                  <xs:attribute name="l"		type="xs:string" />
+                  <xs:attribute name="Phn"		type="xs:string" />
+                  <xs:attribute name="Pos"		type="xs:string" />
+                  <xs:attribute name="f"		type="xs:string" />
+                  <xs:attribute name="s"		type="xs:string"  />
+                  <xs:attribute name="med"		type="xs:string"  />
+                  <xs:attribute name="c"		type="xs:string"  />
+                  <xs:attribute name="Cf"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="EntryPrimaryKey" name="EntryRecord">
+      <xs:selector xpath=".//Entry" />
+      <!-- The key for each entry is the unique combination of POS and parent label -->
+      <xs:field xpath="@EntryId" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="SensePrimaryKey" name="SenseRecord">
+      <xs:selector xpath=".//Sense" />
+      <!-- The key for each entry is the unique combination of POS and parent label -->
+      <xs:field xpath="@EntryId" />
+      <xs:field xpath="@N" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="LexFunPrimaryKey" name="LexFunRecord">
+      <xs:selector xpath=".//LexFun" />
+      <!-- The key for each entry is the unique combination of POS and parent label -->
+      <xs:field xpath="@EntryId" />
+      <xs:field xpath="@lv" />
+      <xs:field xpath="@lf" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

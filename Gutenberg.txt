@@ -1,0 +1,52 @@
+﻿1 pr. pl.,VBP,number=pl;person=1
+1 pr. s.,VBP,number=sg;person=1
+1 pt. s.,VBD,number=sg;person=1
+2 pl.,VBP,number=pl;person=2
+2 pr. pl.,VBP,number=pl;person=2
+2 pr. s.,VBP,number=sg;person=2
+2 pt. s.,VBD,number=sg;person=2
+adv.,ADV,
+dat.,N,c=dat
+despicere,,
+ger.,VAG,
+gerund.,VAG,
+imp.,VBI,
+imp. pl.,VBI,number=pl
+imp. pl. refl.,VBI,number=pl;arg=refl
+imp. s.,VBI,number=sg
+Inf,VB,
+intr.,VB,
+laqueatus,,
+pl.,VBP,number=pl
+pl. pl.,VAN,number=pl
+pp.,VAN,
+pp. oneratus,VAN,
+pp. redomitus,VAN,
+pr. p.,VAG,
+pr. p. pl.,VAG,number=pl
+pr. pl.,VBP,number=pl
+pr. s.,VBP,number=sg
+pr. s. impers.,VBP,number=sg
+pr. s. reflex.,VBP,number=sg;arg=refl
+pr. s. subj.,VBP,number=sg;mood=subj
+pr. subj.,VBP,mood=subj
+pt. pl.,VBD,number=pl
+pt. pl. refl.,VBD,number=pl;arg=refl
+pt. s.,VBD,number=sg
+pt. s. (weak),VBD,number=sg
+pt. s. refl.,VBD,number=sg;arg=refl
+pt. s. subj.,VBD,number=sg
+pt. subj.,VBD,mood=subj
+reflex.,VB,arg=refl
+refl.,VB,arg=refl
+reprehendo,,
+sb.,N,
+sb. pl.,NS,
+specula,,
+subj.,,mood=subj
+succingere,,
+superl.,N,
+used as auxil.,AXP,
+v.,VB,
+v. refl.,VB,arg=refl
+volutare,,

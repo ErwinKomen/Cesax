@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Chart" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Chart" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Clause">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Const" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="ClauseId" type="xs:integer" />
+                  <xs:attribute name="ConstId" type="xs:integer" />
+                  <xs:attribute name="Label" type="xs:string" />
+                  <xs:attribute name="Text" type="xs:string" />
+                  <xs:attribute name="SlotNo" type="xs:integer" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ClauseId" type="xs:integer" />
+            <xs:attribute name="LocId" type="xs:string" />
+            <xs:attribute name="Type" type="xs:string" />
+            <xs:attribute name="Vern" type="xs:string" />
+            <xs:attribute name="Eng" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

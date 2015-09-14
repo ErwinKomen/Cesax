@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MorphTag" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MorphTag" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TagList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tag" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="TagId"  type="xs:integer" />
+                  <xs:attribute name="POS"    type="xs:string" />
+                  <xs:attribute name="Parent" type="xs:string" />
+                  <xs:attribute name="Ext"    type="xs:string" />
+                  <xs:attribute name="OEtag"  type="xs:string" />
+                  <xs:attribute name="Descr"  type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TorCamList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TorCam" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="TorCamId" type="xs:integer" />
+                  <xs:attribute name="Toron"    type="xs:string" />
+                  <xs:attribute name="Camno"    type="xs:string" />
+                  <xs:attribute name="Title"    type="xs:string" />
+                  <xs:attribute name="File"     type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

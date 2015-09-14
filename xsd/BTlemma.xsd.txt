@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BT" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="BT" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="E">
+          <xs:complexType>
+			<xs:attribute name="id"		type="xs:integer" />
+            <xs:attribute name="v"		type="xs:string"  />
+			<xs:attribute name="bt"		type="xs:integer" />
+            <xs:attribute name="f"		type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="C">
+          <xs:complexType>
+			<xs:attribute name="id"		type="xs:integer" />
+            <xs:attribute name="n"		type="xs:integer" />
+			<xs:attribute name="w"		type="xs:string"  />
+            <xs:attribute name="f"		type="xs:integer" />
+            <xs:attribute name="t"		type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="L">
+          <xs:complexType>
+			<xs:attribute name="id"		type="xs:integer" />
+			<xs:attribute name="l"		type="xs:string"  />
+            <xs:attribute name="bt"		type="xs:integer" />
+            <xs:attribute name="ps"		type="xs:string"  />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V">
+          <xs:complexType>
+			<xs:attribute name="id"		type="xs:integer" />
+			<xs:attribute name="v"		type="xs:string"  />
+			<xs:attribute name="l"		type="xs:string"  />
+			<xs:attribute name="f"		type="xs:string"  />
+            <xs:attribute name="bt"		type="xs:integer" />
+            <xs:attribute name="ps"		type="xs:string"  />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="VernPrimaryKey" name="VernRecord">
+      <xs:selector xpath=".//V" />
+      <!-- The key for each entry is the unique combination of @v and @bt -->
+      <xs:field xpath="@v" />
+      <xs:field xpath="@bt" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="LemmaPrimaryKey" name="LemmaRecord">
+      <xs:selector xpath=".//L" />
+      <!-- The key for each entry is the unique combination of @l and @bt -->
+      <xs:field xpath="@l" />
+      <xs:field xpath="@bt" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TEI" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="eTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fs" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="f" minOccurs="0" maxOccurs="unbounded">
+				  <xs:complexType>
+					<xs:attribute name="name"	type="xs:string" />
+					<xs:attribute name="value"	type="xs:string" />
+				  </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type"	type="xs:string" />
+            <!-- Use @feats with care; this is not used commonly -->
+            <xs:attribute name="feats"	type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ref" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="type"	type="xs:string" />
+            <xs:attribute name="target"	type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="eLeaf" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Type"	type="xs:string" />
+            <xs:attribute name="Text"	type="xs:string" />
+            <xs:attribute name="from"	type="xs:integer" />
+            <xs:attribute name="to"		type="xs:integer" />
+            <!-- The @prob (probability) value is only used for POS-parsing -->
+            <xs:attribute name="prob"	type="xs:string" />
+            <!-- The @n(umber) attribute numbers the words in a sentence (Tiger > Psdx) -->
+            <xs:attribute name="n"		type="xs:integer" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="eTree" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Id"		type="xs:integer" />
+      <xs:attribute name="Label"	type="xs:string" />
+      <xs:attribute name="IPnum"	type="xs:integer" />
+      <xs:attribute name="from"		type="xs:integer" />
+      <xs:attribute name="to"		type="xs:integer" />
+      <!-- The @b(egin) and @e(nd) show which word numbers are in the constituent (Tiger > Psdx) -->
+      <xs:attribute name="b"		type="xs:integer" />
+      <xs:attribute name="e"		type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TEI" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="teiHeader">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fileDesc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="editionStmt"	type="xs:string" minOccurs="0" />
+                    <xs:element name="extent"		type="xs:string" minOccurs="0" />
+                    <xs:element name="seriesStmt"	type="xs:string" minOccurs="0" />
+                    <xs:element name="notesStmt"	type="xs:string" minOccurs="0" />
+                    <xs:element name="titleStmt" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="author" type="xs:string" />
+                        <xs:attribute name="editor" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="publicationStmt" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="distributor" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="sourceDesc" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="bibl" type="xs:string" />
+                        <xs:attribute name="date" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="revisionDesc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="change" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="when"		type="xs:string" />
+                        <xs:attribute name="who"		type="xs:string" />
+                        <xs:attribute name="comment"	type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="metadata" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="meta" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="id"			type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+				  <!-- The [type] is normally set as "native" -->
+                  <xs:attribute name="type"				type="xs:string" />
+				  <!-- The [src] is normally not specified -->
+                  <xs:attribute name="src"				type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="profileDesc" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="langUsage" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                       <xs:sequence>
+						<xs:element name="language" minOccurs="0" maxOccurs="unbounded">
+						  <xs:complexType>
+							<xs:attribute name="ident"		type="xs:string" />
+							<xs:attribute name="name"		type="xs:string" />
+						  </xs:complexType>
+						</xs:element>
+						<xs:element name="creation" minOccurs="0" maxOccurs="unbounded">
+						  <xs:complexType>
+							<xs:attribute name="original"	type="xs:string" />
+							<xs:attribute name="manuscript"	type="xs:string" />
+							<xs:attribute name="genre"		type="xs:string" />
+							<!-- The subtype can be the period (B1, ME) or the genre classification (CGN) -->
+							<xs:attribute name="subtype"	type="xs:string" />
+						  </xs:complexType>
+						</xs:element>
+					   </xs:sequence>
+					  </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="eTree" />
+        <xs:element name="forestGrp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="forest" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="div" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="seg"	type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                        </xs:sequence>
+                        <xs:attribute name="lang"	type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="eTree" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="forestId"		type="xs:integer" />
+                  <xs:attribute name="File"			type="xs:string" />
+                  <xs:attribute name="TextId"		type="xs:string" />
+                  <xs:attribute name="Location"		type="xs:string" />
+                  <xs:attribute name="Section"		type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="File" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="EtreeKey" name="EtreeRecord">
+      <xs:selector xpath=".//eTree" />
+      <!-- The key for each <eTree> element is the unique @Id value -->
+      <xs:field xpath="@Id" />
+    </xs:key>
+    <xs:key msdata:PrimaryKey="true" msdata:ConstraintName="ForestKey" name="ForestRecord">
+      <xs:selector xpath=".//forest" />
+      <!-- The key for each <forest> element is the unique @forestId value -->
+      <xs:field xpath="@forestId" />
+    </xs:key>
+  </xs:element>
+</xs:schema>
